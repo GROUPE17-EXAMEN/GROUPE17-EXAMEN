@@ -16,5 +16,29 @@ namespace ExamenProjetGestionEtudiant
         {
             InitializeComponent();
         }
+
+        private void LoadFormInPanel(Form form)
+        {
+            
+            panelMain.Controls.Clear();
+            form.TopLevel = false;
+            form.FormBorderStyle = FormBorderStyle.None; 
+            form.Dock = DockStyle.Fill;
+
+            panelMain.Controls.Add(form);
+            panelMain.Tag = form; 
+            form.Show();
+        }
+
+        private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
+        {
+            switch (e.Node.Text)
+            {
+                case "Utilisateurs":
+                    LoadFormInPanel(new UtilisateurForm());
+                    break;
+            }
+
+        }
     }
 }
