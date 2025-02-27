@@ -16,5 +16,9 @@ namespace ExamenProjetGestionEtudiant
         [MaxLength(255)]
         [Index(IsUnique = true)]
         public string NomClasse { get; set; }
+
+        public ICollection<Professeur> professeurs { get; set; }
+        public ICollection<Etudiant> etudiants { get; set; }
+        public ICollection<Cours> cours { get; set; }
     }
 }

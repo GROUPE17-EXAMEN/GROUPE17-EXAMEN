@@ -17,5 +17,8 @@ namespace ExamenProjetGestionEtudiant
         [Index(IsUnique = true)]
         public string NomCours { get; set; }
         public string Description { get; set; }
+
+        public ICollection<Classe> classes { get; set; }
+        public ICollection<Matiere> matieres { get; set; }
     }
 }

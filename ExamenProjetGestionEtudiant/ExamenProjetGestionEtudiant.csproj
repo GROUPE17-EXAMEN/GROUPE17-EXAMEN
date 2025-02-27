@@ -57,9 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classe.cs" />
-    <Compile Include="ClassesCours.cs" />
     <Compile Include="Cours.cs" />
-    <Compile Include="CoursMatieres.cs" />
     <Compile Include="DBExamenContext.cs" />
     <Compile Include="Etudiant.cs" />
     <Compile Include="Form1.cs">
@@ -68,17 +66,21 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="HomeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HomeForm.Designer.cs">
+      <DependentUpon>HomeForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Matiere.cs" />
-    <Compile Include="Migrations\202502241649328_firstMigration.cs" />
-    <Compile Include="Migrations\202502241649328_firstMigration.Designer.cs">
-      <DependentUpon>202502241649328_firstMigration.cs</DependentUpon>
+    <Compile Include="Migrations\202502271614228_firstDataBaseMigrations.cs" />
+    <Compile Include="Migrations\202502271614228_firstDataBaseMigrations.Designer.cs">
+      <DependentUpon>202502271614228_firstDataBaseMigrations.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Notes.cs" />
     <Compile Include="OTPCodes.cs" />
     <Compile Include="Professeur.cs" />
-    <Compile Include="ProfesseursClasses.cs" />
-    <Compile Include="ProfesseursMatieres.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utilisateur.cs" />
@@ -91,8 +93,11 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202502241649328_firstMigration.resx">
-      <DependentUpon>202502241649328_firstMigration.cs</DependentUpon>
+    <EmbeddedResource Include="HomeForm.resx">
+      <DependentUpon>HomeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202502271614228_firstDataBaseMigrations.resx">
+      <DependentUpon>202502271614228_firstDataBaseMigrations.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

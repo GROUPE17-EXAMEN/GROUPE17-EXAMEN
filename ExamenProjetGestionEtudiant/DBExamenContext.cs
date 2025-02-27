@@ -21,9 +21,9 @@ namespace ExamenProjetGestionEtudiant
         public DbSet<Utilisateur> utilisateurs { get; set; }
 
         
-        public DbSet<ClassesCours> classesCours { get; set; }
-        public DbSet<CoursMatieres> coursMatieres { get; set; }
-        public DbSet<ProfesseursMatieres> professeursMatieres { get; set; }
-        public DbSet<ProfesseursClasses> professeursClasses { get; set; }
+        //public DbSet<ClassesCours> classesCours { get; set; }
+        //public DbSet<CoursMatieres> coursMatieres { get; set; }
+        //public DbSet<ProfesseursMatieres> professeursMatieres { get; set; }
+        //public DbSet<ProfesseursClasses> professeursClasses { get; set; }
     }
 }

@@ -21,5 +21,8 @@ namespace ExamenProjetGestionEtudiant
         [MaxLength(255)]
         [Index(IsUnique = true)]
         public string Email { get; set; }
+
+        public ICollection<Classe> classes { get; set; }
+        public ICollection<Matiere> matieres { get; set; }
     }
 }
