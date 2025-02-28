@@ -28,7 +28,7 @@ namespace ExamenProjetGestionEtudiant
 
             panelMain.Controls.Clear();
             form.TopLevel = false;
-            form.FormBorderStyle = FormBorderStyle.None;
+            //form.FormBorderStyle = FormBorderStyle.None;
             form.Dock = DockStyle.Fill;
 
             panelMain.Controls.Add(form);
