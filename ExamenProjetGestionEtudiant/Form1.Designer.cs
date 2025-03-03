@@ -1,6 +1,8 @@
-﻿namespace ExamenProjetGestionEtudiant
+﻿using System.Windows.Forms;
+
+namespace ExamenProjetGestionEtudiant
 {
-    partial class Form1
+    partial class Form1 : Form
     {
         /// <summary>
         /// Variable nécessaire au concepteur.

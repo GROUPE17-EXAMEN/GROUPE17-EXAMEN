@@ -37,12 +37,22 @@ namespace ExamenProjetGestionEtudiant
         }
 
         private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
-        {
-            switch(e.Node.Name)
+      
+    {          switch(e.Node.Name)
             {
                 case "NoeudGestionUser":
                     LoadFormInPanel(new UtilisateurForm());
                     break;
+                case "NoeudGestionCours":
+                    LoadFormInPanel(new CoursForm());
+                    break;
+                case "NoeudGestionMatieres":
+                    LoadFormInPanel(new MatiereForm());
+                    break;
+                case "NoeudGestionProfesseur":
+                    LoadFormInPanel(new ProfesseurForm());
+                    break;
+
             }
         }
     }

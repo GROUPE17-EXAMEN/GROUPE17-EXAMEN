@@ -1,6 +1,8 @@
-﻿namespace ExamenProjetGestionEtudiant
+﻿using System.Windows.Forms;
+
+namespace ExamenProjetGestionEtudiant
 {
-    partial class ResetPasswordForm
+    partial class ResetPasswordForm : Form
     {
         /// <summary>
         /// Required designer variable.

@@ -7,13 +7,13 @@ namespace ExamenProjetGestionEtudiant.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.5.1")]
-    public sealed partial class firstDataBaseMigrations : IMigrationMetadata
+    public sealed partial class dernierechance : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(firstDataBaseMigrations));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(dernierechance));
         
         string IMigrationMetadata.Id
         {
-            get { return "202502271614228_firstDataBaseMigrations"; }
+            get { return "202503022110146_dernierechance"; }
         }
         
         string IMigrationMetadata.Source

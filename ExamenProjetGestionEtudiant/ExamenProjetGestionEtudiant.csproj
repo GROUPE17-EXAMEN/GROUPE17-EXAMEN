@@ -74,6 +74,12 @@
   <ItemGroup>
     <Compile Include="Classe.cs" />
     <Compile Include="Cours.cs" />
+    <Compile Include="CoursForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CoursForm.Designer.cs">
+      <DependentUpon>CoursForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="DBExamenContext.cs" />
     <Compile Include="Etudiant.cs" />
     <Compile Include="Form1.cs">
@@ -89,14 +95,26 @@
       <DependentUpon>HomeForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Matiere.cs" />
-    <Compile Include="Migrations\202502271614228_firstDataBaseMigrations.cs" />
-    <Compile Include="Migrations\202502271614228_firstDataBaseMigrations.Designer.cs">
-      <DependentUpon>202502271614228_firstDataBaseMigrations.cs</DependentUpon>
+    <Compile Include="MatiereForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MatiereForm.Designer.cs">
+      <DependentUpon>MatiereForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202503022110146_dernierechance.cs" />
+    <Compile Include="Migrations\202503022110146_dernierechance.Designer.cs">
+      <DependentUpon>202503022110146_dernierechance.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Notes.cs" />
     <Compile Include="OTPCodes.cs" />
     <Compile Include="Professeur.cs" />
+    <Compile Include="ProfesseurForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProfesseurForm.Designer.cs">
+      <DependentUpon>ProfesseurForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ResetPasswordForm.cs">
@@ -112,14 +130,23 @@
     <Compile Include="UtilisateurForm.Designer.cs">
       <DependentUpon>UtilisateurForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="CoursForm.resx">
+      <DependentUpon>CoursForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HomeForm.resx">
       <DependentUpon>HomeForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202502271614228_firstDataBaseMigrations.resx">
-      <DependentUpon>202502271614228_firstDataBaseMigrations.cs</DependentUpon>
+    <EmbeddedResource Include="MatiereForm.resx">
+      <DependentUpon>MatiereForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202503022110146_dernierechance.resx">
+      <DependentUpon>202503022110146_dernierechance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProfesseurForm.resx">
+      <DependentUpon>ProfesseurForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
