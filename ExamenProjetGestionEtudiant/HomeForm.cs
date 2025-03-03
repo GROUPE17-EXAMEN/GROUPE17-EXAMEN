@@ -43,6 +43,15 @@ namespace ExamenProjetGestionEtudiant
                 case "NoeudGestionUser":
                     LoadFormInPanel(new UtilisateurForm());
                     break;
+                case "NoeudGestionClasse":
+                    LoadFormInPanel(new ClasseForm());
+                    break;
+                case "NoeudGestionEtudiant":
+                    LoadFormInPanel(new EtudiantForm());
+                    break;
+                case "NoeudGestionCours":
+                    LoadFormInPanel(new CoursForm());
+                    break;
             }
         }
     }

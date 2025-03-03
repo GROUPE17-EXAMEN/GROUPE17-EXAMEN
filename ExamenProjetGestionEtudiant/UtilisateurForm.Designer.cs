@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UtilisateurForm));
             this.txtId = new System.Windows.Forms.TextBox();
             this.txtNomUt = new System.Windows.Forms.TextBox();
@@ -47,10 +48,17 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnResetPwd = new System.Windows.Forms.Button();
+            this.errorProviderNomUser = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProviderTel = new System.Windows.Forms.ErrorProvider(this.components);
+            this.txtIndicatif = new System.Windows.Forms.TextBox();
+            this.errorProviderPassword = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUser)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderNomUser)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderTel)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderPassword)).BeginInit();
             this.SuspendLayout();
             // 
             // txtId
@@ -69,6 +77,7 @@
             this.txtNomUt.Name = "txtNomUt";
             this.txtNomUt.Size = new System.Drawing.Size(298, 33);
             this.txtNomUt.TabIndex = 1;
+            this.txtNomUt.Validating += new System.ComponentModel.CancelEventHandler(this.txtNomUt_Validating);
             // 
             // txtMotDePasse
             // 
@@ -77,14 +86,16 @@
             this.txtMotDePasse.Name = "txtMotDePasse";
             this.txtMotDePasse.Size = new System.Drawing.Size(298, 33);
             this.txtMotDePasse.TabIndex = 2;
+            this.txtMotDePasse.Validating += new System.ComponentModel.CancelEventHandler(this.txtMotDePasse_Validating);
             // 
             // txtTel
             // 
-            this.txtTel.Location = new System.Drawing.Point(12, 231);
+            this.txtTel.Location = new System.Drawing.Point(79, 231);
             this.txtTel.Multiline = true;
             this.txtTel.Name = "txtTel";
-            this.txtTel.Size = new System.Drawing.Size(298, 33);
+            this.txtTel.Size = new System.Drawing.Size(231, 33);
             this.txtTel.TabIndex = 3;
+            this.txtTel.Validating += new System.ComponentModel.CancelEventHandler(this.txtTel_Validating);
             // 
             // cmbRole
             // 
@@ -233,6 +244,7 @@
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.txtIndicatif);
             this.groupBox1.Controls.Add(this.btnResetPwd);
             this.groupBox1.Controls.Add(this.txtNomUt);
             this.groupBox1.Controls.Add(this.btnClear);
@@ -271,6 +283,28 @@
             this.btnResetPwd.Visible = false;
             this.btnResetPwd.Click += new System.EventHandler(this.btnResetPwd_Click);
             // 
+            // errorProviderNomUser
+            // 
+            this.errorProviderNomUser.ContainerControl = this;
+            // 
+            // errorProviderTel
+            // 
+            this.errorProviderTel.ContainerControl = this;
+            // 
+            // txtIndicatif
+            // 
+            this.txtIndicatif.Location = new System.Drawing.Point(12, 232);
+            this.txtIndicatif.Multiline = true;
+            this.txtIndicatif.Name = "txtIndicatif";
+            this.txtIndicatif.ReadOnly = true;
+            this.txtIndicatif.Size = new System.Drawing.Size(61, 32);
+            this.txtIndicatif.TabIndex = 15;
+            this.txtIndicatif.Text = "+221";
+            // 
+            // errorProviderPassword
+            // 
+            this.errorProviderPassword.ContainerControl = this;
+            // 
             // UtilisateurForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -288,6 +322,9 @@
             this.panel3.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderNomUser)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderTel)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderPassword)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -312,5 +349,9 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnResetPwd;
+        private System.Windows.Forms.ErrorProvider errorProviderNomUser;
+        private System.Windows.Forms.ErrorProvider errorProviderTel;
+        private System.Windows.Forms.TextBox txtIndicatif;
+        private System.Windows.Forms.ErrorProvider errorProviderPassword;
     }
 }

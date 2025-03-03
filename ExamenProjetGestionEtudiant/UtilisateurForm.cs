@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
@@ -36,9 +37,61 @@ namespace ExamenProjetGestionEtudiant
             dataGridViewUser.DataSource = db.utilisateurs.Select(e => new  { Id = e.Id, Nom_Utilisateur = e.NomUtilisateur, Mot_De_Passe = e.MotDePasse, Telephone = e.Telephone, Role = e.Role}).ToList();
         }
 
+        private bool ValidationChamps()
+        {
+            bool estValide = true;
+            if (String.IsNullOrEmpty(txtNomUt.Text))
+            {
+                
+                errorProviderNomUser.SetError(txtNomUt, "Ce champ est obligatoire");
+                estValide = false;
+            }
+            else
+            {
+                errorProviderNomUser.SetError(txtNomUt, "");
+            }
+
+            
+
+            string patternTel = @"^(70|75|76|77|78)\d{7}$";
+            if (!System.Text.RegularExpressions.Regex.IsMatch(txtTel.Text, patternTel) || String.IsNullOrEmpty(txtTel.Text))
+            {
+                
+                errorProviderTel.SetError(txtTel, "Le numéro incorrect!");
+            }
+            else
+            {
+                errorProviderTel.SetError(txtTel, "");
+            }
+
+            string password = txtMotDePasse.Text;
+
+
+            string pattern = @"^(?=.*[A-Z])(?=.*[\W_]).+$";
+
+            if (!Regex.IsMatch(password, pattern) || String.IsNullOrEmpty(password))
+            {
+                
+                errorProviderPassword.SetError(txtMotDePasse, "Le mot de passe doit contenir au moins une majuscule et un caractère spécial !");
+                estValide = false;
+            }
+            else
+            {
+                errorProviderPassword.SetError(txtMotDePasse, "");
+            }
+
+
+            return estValide;
+        }
+
         private void btnSave_Click(object sender, EventArgs e)
         {
-            using(var db = new DBExamenContext())
+            if (!ValidationChamps())
+            {
+                MessageBox.Show("Veuillez corriger les erreurs avant d'ajouter l'utilisateur.", "Erreur de validation", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            using (var db = new DBExamenContext())
             {
                 try
                 {
@@ -105,12 +158,13 @@ namespace ExamenProjetGestionEtudiant
                     if (ut != null)
                     {
                         ut.NomUtilisateur = txtNomUt.Text;
-                        ut.MotDePasse = txtMotDePasse.Text;
+                        
                         ut.Role = cmbRole.Text;
                         ut.Telephone = txtTel.Text;
                         db.SaveChanges();
                         actualise();
                         btnSave.Enabled = true;
+                        btnResetPwd.Visible = false;
                         MessageBox.Show("Utilisateur Mise à jour avec succéss", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         txtNomUt.Text = string.Empty;
                         txtMotDePasse.Text = string.Empty;
@@ -138,6 +192,8 @@ namespace ExamenProjetGestionEtudiant
                     {
                         db.utilisateurs.Remove(ut);
                         db.SaveChanges();
+                        btnSave.Enabled = true;
+                        btnResetPwd.Visible = false;
                         MessageBox.Show("Utilisateur supprimée avec succès !", "Succès", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         actualise();
                     }
@@ -167,6 +223,54 @@ namespace ExamenProjetGestionEtudiant
             txtNomUt.Text = string.Empty;
             txtTel.Text = string.Empty;
             cmbRole.Text = string.Empty;
+            btnSave.Enabled = true;
+            btnResetPwd.Visible = false;
+        }
+
+        private void txtNomUt_Validating(object sender, CancelEventArgs e)
+        {
+            if (String.IsNullOrEmpty(txtNomUt.Text))
+            {
+                e.Cancel = true;
+                errorProviderNomUser.SetError(txtNomUt, "Ce champ est obligatoire");
+            }
+            else
+            {
+                errorProviderNomUser.SetError(txtNomUt, "");
+            }
+        }
+
+        private void txtTel_Validating(object sender, CancelEventArgs e)
+        {
+            string pattern = @"^(70|75|76|77|78)\d{7}$";
+            if (!System.Text.RegularExpressions.Regex.IsMatch(txtTel.Text, pattern) || String.IsNullOrEmpty(txtTel.Text))
+            {
+                e.Cancel = true;
+                errorProviderTel.SetError(txtTel, "Le numéro incorrect!");
+            }
+            else
+            {
+                errorProviderTel.SetError(txtTel, "");
+            }
+        }
+
+        private void txtMotDePasse_Validating(object sender, CancelEventArgs e)
+        {
+            string password = txtMotDePasse.Text;
+
+            
+            string pattern = @"^(?=.*[A-Z])(?=.*[\W_]).+$";
+
+            if (!Regex.IsMatch(password, pattern) || String.IsNullOrEmpty(password))
+            {
+                e.Cancel = true; 
+                txtMotDePasse.Focus();
+                errorProviderPassword.SetError(txtMotDePasse, "Le mot de passe doit contenir au moins une majuscule et un caractère spécial !");
+            }
+            else
+            {
+                errorProviderPassword.SetError(txtMotDePasse, ""); 
+            }
         }
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -37,7 +38,13 @@
             this.btnUpdatePassword = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.errorProviderAncienPwd = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProviderNewPwd = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProviderConfirmPwd = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderAncienPwd)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderNewPwd)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderConfirmPwd)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -75,16 +82,18 @@
             this.txtAncienPassword.Location = new System.Drawing.Point(96, 52);
             this.txtAncienPassword.Multiline = true;
             this.txtAncienPassword.Name = "txtAncienPassword";
-            this.txtAncienPassword.Size = new System.Drawing.Size(283, 38);
+            this.txtAncienPassword.Size = new System.Drawing.Size(321, 38);
             this.txtAncienPassword.TabIndex = 3;
+            this.txtAncienPassword.Validating += new System.ComponentModel.CancelEventHandler(this.txtAncienPassword_Validating);
             // 
             // txtNewPassword
             // 
             this.txtNewPassword.Location = new System.Drawing.Point(96, 142);
             this.txtNewPassword.Multiline = true;
             this.txtNewPassword.Name = "txtNewPassword";
-            this.txtNewPassword.Size = new System.Drawing.Size(283, 38);
+            this.txtNewPassword.Size = new System.Drawing.Size(321, 38);
             this.txtNewPassword.TabIndex = 4;
+            this.txtNewPassword.Validating += new System.ComponentModel.CancelEventHandler(this.txtNewPassword_Validating);
             // 
             // txtConfirmNewPassword
             // 
@@ -93,6 +102,7 @@
             this.txtConfirmNewPassword.Name = "txtConfirmNewPassword";
             this.txtConfirmNewPassword.Size = new System.Drawing.Size(321, 38);
             this.txtConfirmNewPassword.TabIndex = 5;
+            this.txtConfirmNewPassword.Validating += new System.ComponentModel.CancelEventHandler(this.txtConfirmNewPassword_Validating);
             // 
             // btnUpdatePassword
             // 
@@ -137,6 +147,18 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Réinitialisation de Password";
             // 
+            // errorProviderAncienPwd
+            // 
+            this.errorProviderAncienPwd.ContainerControl = this;
+            // 
+            // errorProviderNewPwd
+            // 
+            this.errorProviderNewPwd.ContainerControl = this;
+            // 
+            // errorProviderConfirmPwd
+            // 
+            this.errorProviderConfirmPwd.ContainerControl = this;
+            // 
             // ResetPasswordForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -148,6 +170,9 @@
             this.Load += new System.EventHandler(this.ResetPasswordForm_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderAncienPwd)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderNewPwd)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderConfirmPwd)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -163,5 +188,8 @@
         private System.Windows.Forms.Button btnUpdatePassword;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.ErrorProvider errorProviderAncienPwd;
+        private System.Windows.Forms.ErrorProvider errorProviderNewPwd;
+        private System.Windows.Forms.ErrorProvider errorProviderConfirmPwd;
     }
 }

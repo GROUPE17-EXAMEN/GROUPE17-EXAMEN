@@ -124,9 +124,10 @@
             // 
             // treeView1
             // 
-            this.treeView1.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.treeView1.BackColor = System.Drawing.SystemColors.ControlText;
             this.treeView1.Dock = System.Windows.Forms.DockStyle.Left;
             this.treeView1.ForeColor = System.Drawing.SystemColors.Window;
+            this.treeView1.LineColor = System.Drawing.Color.White;
             this.treeView1.Location = new System.Drawing.Point(0, 0);
             this.treeView1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.treeView1.Name = "treeView1";
@@ -183,7 +184,7 @@
             this.tabPage2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.tabPage2.Size = new System.Drawing.Size(1641, 785);
+            this.tabPage2.Size = new System.Drawing.Size(1149, 512);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -194,7 +195,7 @@
             this.tabPage3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.tabPage3.Size = new System.Drawing.Size(1641, 785);
+            this.tabPage3.Size = new System.Drawing.Size(1149, 512);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "tabPage3";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -205,7 +206,7 @@
             this.tabPage4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.tabPage4.Size = new System.Drawing.Size(1641, 785);
+            this.tabPage4.Size = new System.Drawing.Size(1149, 512);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "tabPage4";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -216,7 +217,7 @@
             this.tabPage5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.tabPage5.Size = new System.Drawing.Size(1641, 785);
+            this.tabPage5.Size = new System.Drawing.Size(1149, 512);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "tabPage5";
             this.tabPage5.UseVisualStyleBackColor = true;
