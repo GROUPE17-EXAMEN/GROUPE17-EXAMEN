@@ -72,6 +72,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AjoutNoteForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AjoutNoteForm.Designer.cs">
+      <DependentUpon>AjoutNoteForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="AttribCourClasseForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -148,6 +154,9 @@
     <Compile Include="UtilisateurForm.Designer.cs">
       <DependentUpon>UtilisateurForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AjoutNoteForm.resx">
+      <DependentUpon>AjoutNoteForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AttribCourClasseForm.resx">
       <DependentUpon>AttribCourClasseForm.cs</DependentUpon>
     </EmbeddedResource>

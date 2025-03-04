@@ -30,5 +30,6 @@ namespace ExamenProjetGestionEtudiant
         public int  IdClasse { get; set; }
         [ForeignKey("IdClasse")]
         public Classe classe { get; set; }
+        public ICollection<Notes> notes { get; set; } 
     }
 }

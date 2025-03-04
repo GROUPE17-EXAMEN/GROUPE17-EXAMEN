@@ -47,10 +47,10 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtIndicatif = new System.Windows.Forms.TextBox();
             this.btnResetPwd = new System.Windows.Forms.Button();
             this.errorProviderNomUser = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProviderTel = new System.Windows.Forms.ErrorProvider(this.components);
-            this.txtIndicatif = new System.Windows.Forms.TextBox();
             this.errorProviderPassword = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUser)).BeginInit();
             this.panel1.SuspendLayout();
@@ -103,8 +103,7 @@
             this.cmbRole.Items.AddRange(new object[] {
             "Administrateur",
             "DE",
-            "Agent",
-            "Professeur"});
+            "Agent"});
             this.cmbRole.Location = new System.Drawing.Point(10, 157);
             this.cmbRole.Name = "cmbRole";
             this.cmbRole.Size = new System.Drawing.Size(298, 31);
@@ -269,6 +268,16 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Formulaire";
             // 
+            // txtIndicatif
+            // 
+            this.txtIndicatif.Location = new System.Drawing.Point(12, 232);
+            this.txtIndicatif.Multiline = true;
+            this.txtIndicatif.Name = "txtIndicatif";
+            this.txtIndicatif.ReadOnly = true;
+            this.txtIndicatif.Size = new System.Drawing.Size(61, 32);
+            this.txtIndicatif.TabIndex = 15;
+            this.txtIndicatif.Text = "+221";
+            // 
             // btnResetPwd
             // 
             this.btnResetPwd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -290,16 +299,6 @@
             // errorProviderTel
             // 
             this.errorProviderTel.ContainerControl = this;
-            // 
-            // txtIndicatif
-            // 
-            this.txtIndicatif.Location = new System.Drawing.Point(12, 232);
-            this.txtIndicatif.Multiline = true;
-            this.txtIndicatif.Name = "txtIndicatif";
-            this.txtIndicatif.ReadOnly = true;
-            this.txtIndicatif.Size = new System.Drawing.Size(61, 32);
-            this.txtIndicatif.TabIndex = 15;
-            this.txtIndicatif.Text = "+221";
             // 
             // errorProviderPassword
             // 
