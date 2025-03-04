@@ -4,6 +4,7 @@
 ## Get latest from https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 
 # User-specific files
+
 *.rsuser
 *.suo
 *.user
@@ -346,6 +347,8 @@ ASALocalRun/
 
 # MFractors (Xamarin productivity tool) working folder
 .mfractor/
+.App.config
+.DBExamenContext
 
 # Local History for Visual Studio
 .localhistory/
