@@ -1,6 +1,12 @@
-﻿namespace ExamenProjetGestionEtudiant
+﻿using System.Windows.Forms;
+
+namespace ExamenProjetGestionEtudiant
 {
-    partial class ResetPasswordForm
+<<<<<<< Updated upstream
+    partial class ResetPasswordForm : Form
+=======
+    partial class ResetPasswordForm:Form
+>>>>>>> Stashed changes
     {
         /// <summary>
         /// Required designer variable.

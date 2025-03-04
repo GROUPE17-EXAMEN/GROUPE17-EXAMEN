@@ -82,6 +82,7 @@ namespace ExamenProjetGestionEtudiant
             }
         }
 
+<<<<<<< HEAD
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             using (var db = new DBExamenContext())
@@ -106,6 +107,64 @@ namespace ExamenProjetGestionEtudiant
 
         }
 
+=======
+        private void clear()
+        {
+           
+            cmbMatiere.SelectedIndex = -1;
+           
+            txtDescription.Text = "";
+            txtNomCours.Text = "";
+
+        }
+
+        private void btnSupprimer_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.CurrentRow != null)
+            {
+                var idCour = (int)dataGridView1.CurrentRow.Cells["Id"].Value;
+
+                var couree = db.cours.FirstOrDefault(c => c.Id == idCour);
+
+                if (couree != null)
+                {
+                    couree.matieres = db.matieres
+                                       .Where(m => m.cours.Any(c => c.Id == idCour))
+                                       .ToList();
+
+                    couree.NomCours = txtNomCours.Text;
+                    couree.Description = txtDescription.Text;
+
+                    if (cmbMatiere.SelectedValue != null)
+                    {
+                        int matiereId = Convert.ToInt32(cmbMatiere.SelectedValue);
+                        var matiere = db.matieres.FirstOrDefault(m => m.Id == matiereId);
+
+
+                    }
+                    db.cours.Remove(couree);
+                    db.SaveChanges();
+
+                    refresh();
+
+                    MessageBox.Show("Cours Supprimé avec succès.", "Succès", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    clear();
+                }
+            }
+
+<<<<<<< Updated upstream
+=======
+        private void btnListeClasse_Click(object sender, EventArgs e)
+        {
+            using (var db = new DBExamenContext())
+            {
+                int idCour = Convert.ToInt32(txtId.Text);
+                ListClasse forme = new ListClasse(idCour);
+                forme.ShowDialog();
+            }
+        }
+
+>>>>>>> e723c0f18207e7896ffd1d18551a1c83d0fe6cb6
         private void btnAtribCoursClasse_Click(object sender, EventArgs e)
         {
             using (var db = new DBExamenContext())
@@ -114,6 +173,34 @@ namespace ExamenProjetGestionEtudiant
                 AttribCourClasseForm form = new AttribCourClasseForm(idCour);
                 form.ShowDialog();
             }
+<<<<<<< HEAD
+=======
+>>>>>>> Stashed changes
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAddMat_Click(object sender, EventArgs e)
+        {
+            int coursId = Convert.ToInt32(txtId.Text);
+
+            MatiereForm form = new MatiereForm(coursId);
+            form.ShowDialog();
+
+        }
+
+        private void btnListMat_Click(object sender, EventArgs e)
+        {
+            using (var db = new DBExamenContext())
+            {
+                int idCours = Convert.ToInt32(txtId.Text);
+                ListMatiereForm listeMatiere = new ListMatiereForm(idCours);
+                listeMatiere.ShowDialog();
+            }
+>>>>>>> e723c0f18207e7896ffd1d18551a1c83d0fe6cb6
         }
     }
 }

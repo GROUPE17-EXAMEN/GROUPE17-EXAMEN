@@ -5,9 +5,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace ExamenProjetGestionEtudiant
 {
-    class DBExamenContext : DbContext
+    internal class DBExamenContext : DbContext
     {
         public DBExamenContext() : base("examenConnect") { }
 
@@ -20,10 +21,7 @@ namespace ExamenProjetGestionEtudiant
         public DbSet<Professeur> professeurs { get; set; }
         public DbSet<Utilisateur> utilisateurs { get; set; }
 
-        
-        //public DbSet<ClassesCours> classesCours { get; set; }
-        //public DbSet<CoursMatieres> coursMatieres { get; set; }
-        //public DbSet<ProfesseursMatieres> professeursMatieres { get; set; }
-        //public DbSet<ProfesseursClasses> professeursClasses { get; set; }
+
+
     }
 }

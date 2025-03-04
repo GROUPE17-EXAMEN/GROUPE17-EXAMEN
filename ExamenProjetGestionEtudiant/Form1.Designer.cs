@@ -1,6 +1,12 @@
-﻿namespace ExamenProjetGestionEtudiant
+﻿using System.Windows.Forms;
+
+namespace ExamenProjetGestionEtudiant
 {
-    partial class Form1
+<<<<<<< Updated upstream
+    partial class Form1 : Form
+=======
+    partial class Form1: Form
+>>>>>>> Stashed changes
     {
         /// <summary>
         /// Variable nécessaire au concepteur.

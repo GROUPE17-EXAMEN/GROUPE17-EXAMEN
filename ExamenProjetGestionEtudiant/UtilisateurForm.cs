@@ -272,6 +272,11 @@ namespace ExamenProjetGestionEtudiant
                 errorProviderPassword.SetError(txtMotDePasse, ""); 
             }
         }
+
+        private void txtTel_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

@@ -1,6 +1,12 @@
-﻿namespace ExamenProjetGestionEtudiant
+﻿using System.Windows.Forms;
+
+namespace ExamenProjetGestionEtudiant
 {
-    partial class HomeForm
+<<<<<<< Updated upstream
+    partial class HomeForm : Form
+=======
+    partial class HomeForm:Form
+>>>>>>> Stashed changes
     {
         /// <summary>
         /// Required designer variable.
