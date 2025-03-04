@@ -196,6 +196,51 @@ namespace ExamenProjetGestionEtudiant
                 }
             }
 
+<<<<<<< Updated upstream
+=======
+        private void btnListeClasse_Click(object sender, EventArgs e)
+        {
+            using (var db = new DBExamenContext())
+            {
+                int idCour = Convert.ToInt32(txtId.Text);
+                ListClasse forme = new ListClasse(idCour);
+                forme.ShowDialog();
+            }
+        }
+
+        private void btnAtribCoursClasse_Click(object sender, EventArgs e)
+        {
+            using (var db = new DBExamenContext())
+            {
+                int idCour = Convert.ToInt32(txtId.Text);
+                AttribCourClasseForm form = new AttribCourClasseForm(idCour);
+                form.ShowDialog();
+            }
+>>>>>>> Stashed changes
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAddMat_Click(object sender, EventArgs e)
+        {
+            int coursId = Convert.ToInt32(txtId.Text);
+
+            MatiereForm form = new MatiereForm(coursId);
+            form.ShowDialog();
+
+        }
+
+        private void btnListMat_Click(object sender, EventArgs e)
+        {
+            using (var db = new DBExamenContext())
+            {
+                int idCours = Convert.ToInt32(txtId.Text);
+                ListMatiereForm listeMatiere = new ListMatiereForm(idCours);
+                listeMatiere.ShowDialog();
+            }
         }
     }
 }

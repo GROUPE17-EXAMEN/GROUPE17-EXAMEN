@@ -2,7 +2,11 @@
 
 namespace ExamenProjetGestionEtudiant
 {
+<<<<<<< Updated upstream
     partial class HomeForm : Form
+=======
+    partial class HomeForm:Form
+>>>>>>> Stashed changes
     {
         /// <summary>
         /// Required designer variable.

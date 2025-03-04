@@ -2,7 +2,11 @@
 
 namespace ExamenProjetGestionEtudiant
 {
+<<<<<<< Updated upstream
     partial class Form1 : Form
+=======
+    partial class Form1: Form
+>>>>>>> Stashed changes
     {
         /// <summary>
         /// Variable nécessaire au concepteur.

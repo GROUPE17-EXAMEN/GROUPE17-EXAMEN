@@ -45,7 +45,9 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.5.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
-    <Reference Include="System" />
+    <Reference Include="System">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\System.dll</HintPath>
+    </Reference>
     <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
     </Reference>
@@ -72,6 +74,27 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< Updated upstream
+=======
+    <Compile Include="AttribCourClasseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AttribCourClasseForm.Designer.cs">
+      <DependentUpon>AttribCourClasseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AttribMatiereProf.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AttribMatiereProf.Designer.cs">
+      <DependentUpon>AttribMatiereProf.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AttribProfesseurClasse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AttribProfesseurClasse.Designer.cs">
+      <DependentUpon>AttribProfesseurClasse.cs</DependentUpon>
+    </Compile>
+>>>>>>> Stashed changes
     <Compile Include="Classe.cs" />
     <Compile Include="Cours.cs" />
     <Compile Include="CoursForm.cs">
@@ -94,6 +117,51 @@
     <Compile Include="HomeForm.Designer.cs">
       <DependentUpon>HomeForm.cs</DependentUpon>
     </Compile>
+<<<<<<< Updated upstream
+=======
+    <Compile Include="ListClasse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListClasse.Designer.cs">
+      <DependentUpon>ListClasse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListClasseProfesseur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListClasseProfesseur.Designer.cs">
+      <DependentUpon>ListClasseProfesseur.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListCoursForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListCoursForm.Designer.cs">
+      <DependentUpon>ListCoursForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListeProfesseurClasse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListeProfesseurClasse.Designer.cs">
+      <DependentUpon>ListeProfesseurClasse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListEtudiantForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListEtudiantForm.Designer.cs">
+      <DependentUpon>ListEtudiantForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListMatiereForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListMatiereForm.Designer.cs">
+      <DependentUpon>ListMatiereForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListMatiereProfesseur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListMatiereProfesseur.Designer.cs">
+      <DependentUpon>ListMatiereProfesseur.cs</DependentUpon>
+    </Compile>
+>>>>>>> Stashed changes
     <Compile Include="Matiere.cs" />
     <Compile Include="MatiereForm.cs">
       <SubType>Form</SubType>
@@ -101,19 +169,33 @@
     <Compile Include="MatiereForm.Designer.cs">
       <DependentUpon>MatiereForm.cs</DependentUpon>
     </Compile>
+<<<<<<< Updated upstream
     <Compile Include="Migrations\202503022110146_dernierechance.cs" />
     <Compile Include="Migrations\202503022110146_dernierechance.Designer.cs">
       <DependentUpon>202503022110146_dernierechance.cs</DependentUpon>
+=======
+    <Compile Include="Migrations\202503032132005_finProjet.cs" />
+    <Compile Include="Migrations\202503032132005_finProjet.Designer.cs">
+      <DependentUpon>202503032132005_finProjet.cs</DependentUpon>
+>>>>>>> Stashed changes
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Notes.cs" />
     <Compile Include="OTPCodes.cs" />
     <Compile Include="Professeur.cs" />
+<<<<<<< Updated upstream
     <Compile Include="ProfesseurForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ProfesseurForm.Designer.cs">
       <DependentUpon>ProfesseurForm.cs</DependentUpon>
+=======
+    <Compile Include="professeurForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="professeurForm.Designer.cs">
+      <DependentUpon>professeurForm.cs</DependentUpon>
+>>>>>>> Stashed changes
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -130,6 +212,21 @@
     <Compile Include="UtilisateurForm.Designer.cs">
       <DependentUpon>UtilisateurForm.cs</DependentUpon>
     </Compile>
+<<<<<<< Updated upstream
+=======
+    <EmbeddedResource Include="AttribCourClasseForm.resx">
+      <DependentUpon>AttribCourClasseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AttribMatiereProf.resx">
+      <DependentUpon>AttribMatiereProf.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AttribProfesseurClasse.resx">
+      <DependentUpon>AttribProfesseurClasse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClasseForm.resx">
+      <DependentUpon>ClasseForm.cs</DependentUpon>
+    </EmbeddedResource>
+>>>>>>> Stashed changes
     <EmbeddedResource Include="CoursForm.resx">
       <DependentUpon>CoursForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -139,6 +236,7 @@
     <EmbeddedResource Include="HomeForm.resx">
       <DependentUpon>HomeForm.cs</DependentUpon>
     </EmbeddedResource>
+<<<<<<< Updated upstream
     <EmbeddedResource Include="MatiereForm.resx">
       <DependentUpon>MatiereForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -147,6 +245,37 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ProfesseurForm.resx">
       <DependentUpon>ProfesseurForm.cs</DependentUpon>
+=======
+    <EmbeddedResource Include="ListClasse.resx">
+      <DependentUpon>ListClasse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListClasseProfesseur.resx">
+      <DependentUpon>ListClasseProfesseur.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListCoursForm.resx">
+      <DependentUpon>ListCoursForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListeProfesseurClasse.resx">
+      <DependentUpon>ListeProfesseurClasse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListEtudiantForm.resx">
+      <DependentUpon>ListEtudiantForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListMatiereForm.resx">
+      <DependentUpon>ListMatiereForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListMatiereProfesseur.resx">
+      <DependentUpon>ListMatiereProfesseur.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MatiereForm.resx">
+      <DependentUpon>MatiereForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202503032132005_finProjet.resx">
+      <DependentUpon>202503032132005_finProjet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="professeurForm.resx">
+      <DependentUpon>professeurForm.cs</DependentUpon>
+>>>>>>> Stashed changes
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

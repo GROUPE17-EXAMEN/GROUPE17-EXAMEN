@@ -168,6 +168,11 @@ namespace ExamenProjetGestionEtudiant
             txtTel.Text = string.Empty;
             cmbRole.Text = string.Empty;
         }
+
+        private void txtTel_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

@@ -46,6 +46,7 @@ namespace ExamenProjetGestionEtudiant
                 case "NoeudGestionCours":
                     LoadFormInPanel(new CoursForm());
                     break;
+<<<<<<< Updated upstream
                 case "NoeudGestionMatieres":
                     LoadFormInPanel(new MatiereForm());
                     break;
@@ -53,6 +54,11 @@ namespace ExamenProjetGestionEtudiant
                     LoadFormInPanel(new ProfesseurForm());
                     break;
 
+=======
+                case "NoeudGestionProfesseur":
+                    LoadFormInPanel(new professeurForm());
+                    break;
+>>>>>>> Stashed changes
             }
         }
     }

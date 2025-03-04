@@ -2,7 +2,11 @@
 
 namespace ExamenProjetGestionEtudiant
 {
+<<<<<<< Updated upstream
     partial class ResetPasswordForm : Form
+=======
+    partial class ResetPasswordForm:Form
+>>>>>>> Stashed changes
     {
         /// <summary>
         /// Required designer variable.
